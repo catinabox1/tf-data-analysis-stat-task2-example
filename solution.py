@@ -9,7 +9,7 @@ chat_id = 417796486 # Ваш chat ID, не меняйте название пе�
 def solution(p: float, x: np.array) -> tuple:
 alpha = 1 - p
 n = len(x)
-left = (-x.mean() - 1 / 2) / (14**2 / 2)
-right = (-np.log(alpha) / n -x.mean() - 1 / 2) / (14**2 / 2)
+left = (-min(-x) - 1 / 2) / (14**2 / 2)
+right = (-np.log(alpha) / n -min(-x) - 1 / 2) / (14**2 / 2)
 return left, \
 right
